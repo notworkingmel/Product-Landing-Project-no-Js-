@@ -1,0 +1,278 @@
+*, ::before, ::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 550px;
+}
+
+html {
+  font-family: Montserrat, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: 95px;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+
+  z-index: 300;
+}
+
+nav {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+h1 {
+  font-family: Poppins, sans-serif;
+  width: 70%;
+  text-align: center;
+  font-size: 50px;
+}
+
+.email-icon {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.email-input {
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 7px 13px;
+  
+  display: flex;
+  column-gap: 8px;
+
+  min-width: 350px;
+  max-width: 500px;
+}
+
+#email {
+  flex: 1;
+  border: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+#email:focus {
+  outline: none;
+}
+
+#submit, .buy-button {
+  padding: 6px 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#submit:hover, .buy-button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.features {
+  margin: 50px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.features-box {
+  display: flex;
+  column-gap: 15px;
+}
+
+.features img {
+  height: 70px;
+  width: 70px;
+}
+
+.features-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+}
+
+.video-thumbnail {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container {
+  position: relative;
+}
+
+.video-info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+
+  display: flex;
+  column-gap: 9px;
+  align-items: center;
+}
+
+.video-title {
+  width: 90%;
+  font-weight: 500;
+  color: white;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.channel-picture {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.video-picture {
+  position: relative;
+  width: 700px;
+}
+
+section:last-of-type {
+  margin: 50px 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.prices-box {
+  padding-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+
+  min-width: 225px;
+  max-width: 460px;
+}
+
+.product-name {
+  width: 100%;
+  font-size: 0.95rem;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.product-price , .product-description {
+  text-align: center;
+  margin: 0 20px;
+  font-size: 0.9rem;
+}
+
+.product-price {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.buy-button {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 916px) {
+  .prices-box {
+    flex: 1;
+  }
+  .buy-button {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 915px) {
+  nav {
+    font-size: 0.9rem;
+  }
+  section:last-of-type {
+    flex-wrap: wrap;
+  }
+  .prices-box {
+    flex: 1;
+    min-width: 238px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 735px) {
+  .video-picture {
+    width: 550px;
+  }
+}
+
+@media (max-width: 610px) {
+  header img {
+    width: 40%;
+    height: 60px;
+  }
+  nav {
+    width: 60%;
+    font-size: 0.8rem;
+  }
+  .features {
+    width: 470px;
+  }
+  .features-box {
+    font-size: 0.8rem;
+    width: 400px;
+  }
+  .features-box img {
+    height: 40px;
+    width: 40px;
+  }
+  .video-picture {
+    width: 440px;
+  }
+}
